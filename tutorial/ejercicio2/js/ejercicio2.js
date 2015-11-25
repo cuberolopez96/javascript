@@ -4,7 +4,11 @@ window.addEventListener("load",function(){
 
 	var arr = ["Plum","Orange","Donkey","Carrot","JavaScript"];
 <<<<<<< HEAD
+<<<<<<< HEAD
 	//valor aleatorio
+=======
+	//valor aleatorio de arr
+>>>>>>> changes
 =======
 	//valor aleatorio de arr
 >>>>>>> changes
