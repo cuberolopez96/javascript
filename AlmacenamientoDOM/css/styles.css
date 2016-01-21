@@ -1,0 +1,49 @@
+*{
+	padding:0;
+	margin:0;
+	font-family: 'Poppins',Arial, Helvetica, sans-serif;
+}
+header {
+	width:100%;
+	line-height: 5em;
+	background: #FEEF05;
+	font-size: 200%;
+	color:white;
+	text-align: center;
+}
+#contenido{
+	width:80%;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	margin: 2em auto;
+}
+#contenido form{
+	width:70%;
+	margin:2em auto;
+}
+label{
+	display: block;
+	font-size: 200%;
+	text-decoration: underline #CCC220;
+	color:#CCC220;
+}
+#contenido form input{
+	width:70%;
+	border:none;
+	border-bottom: 2px solid #DFD316;
+	font-size: 200%;
+	margin: 1em 0;
+}
+button{
+	width: 30%;
+	height:2em;
+	line-height: 1em;
+	background: #FFF10A;
+	font-size: 110%;
+	color:white;
+
+}
+#mensaje{
+	font-size: 2em;
+	color:#F2FB01;
+}
+
