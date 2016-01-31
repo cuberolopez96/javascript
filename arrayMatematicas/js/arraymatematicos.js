@@ -78,33 +78,67 @@ function TamanhoNoValidoException(){
 	this.mensaje = "el tamaño no es valido";
 
 }
+function ValoresInvalidosException(){
+	this.mensaje = "introduce los valores correctos";
+}
 
 
 window.addEventListener("load",function(){
-	var  sumar = document.getElementById("sumar");
-	var restar = document.getElementById("restar");
-	var trasponer1 = document.getElementById("trasponer1");
-	var trasponer2 = document.getElementById("trasponer2");
-	var contenido = document.getElementById("contenido");
-	var m1 = new ArrayMatematicos(2,3);
-	var m2 = new ArrayMatematicos(2,3);
-	contenido.innerHTML += "<p>Sumando1</p> "+m1.toString();
-	contenido.innerHTML += "<p>Sumando2</p> "+m2.toString();
-	sumar.addEventListener("click",function(){
-		contenido.innerHTML += "<p>Resultado de la Suma: </p>"+m1.suma(m2).toString();
+	var matriz1;
+	var matriz2;
+	var sumar;
+	var restar;
+	var trasponer1;
+	var trasponer2;
+	var filas1;
+	var columnas1;
+	var filas2;
+	var columnas2;
+	var crearMatrices=document.getElementById("crearMatrices");
+	var contenido =  document.getElementById("contenido");
 
-	});
-	restar.addEventListener("click",function(){
-		contenido.innerHTML +=  "<p>Resultado de la resta</p>"+m1.resta(m2).toString();
-	});
-	trasponer1.addEventListener("click",function(){
-		contenido.innerHTML += "<p>Matriz 1 traspuesta</p>"+ m1.trasponer().toString();
-	});
-	trasponer2.addEventListener("click",function(){
-		contenido.innerHTML += "<p>Matriz 2 traspuesta</p>"+ m2.trasponer().toString();
-	});
+	crearMatrices.addEventListener("click",function(){
+		filas1 = document.getElementById("filas1").value;
+		columnas1 = document.getElementById("columnas1").value
+		filas2 = document.getElementById("filas2").value
+		columnas2 = document.getElementById("columnas2").value;		
+		if(filas1.length == 0 || filas2.length==0|| columnas1.length ==0 || columnas2.length==0){
+			throw new ValoresInvalidosException();
+		}
+		matriz1 = new ArrayMatematicos(filas1,columnas1);
+		matriz2 = new ArrayMatematicos(filas2,columnas2);
+		contenido.innerHTML="<p>Matriz1:</p>"+matriz1.toString();
+		contenido.innerHTML+="<p>Matriz2:</p>"+matriz2.toString();
+		contenido.innerHTML+= "<input type='submit'  id='sumar' value='sumar' />"	
+		contenido.innerHTML += "<input type='submit'  id='restar' value='restar' />"	
+		contenido.innerHTML += "<input type='submit'  id='trasponer1' value='trasponer1' />"	
+		contenido.innerHTML += "<input type='submit'  id='trasponer2' value='trasponer2' />"	
+		sumar = document.getElementById("sumar");
+		restar=document.getElementById("restar");
+		trasponer1=document.getElementById("trasponer1");
+		trasponer2=document.getElementById("trasponer2");
 
-})
+		sumar.addEventListener("click",function(){
+			contenido.innerHTML+="<p>matriz1 + matriz2:</p>"+matriz1.suma(matriz2).toString();
+		});
+		restar.addEventListener("click",function(){
+			contenido.innerHTML+="<p>matriz1-matriz2:</p>"+matriz1.resta(matriz2).toString();
+		});
+		trasponer1.addEventListener("click",function(){
+			contenido.innerHTML+="<p>matriz1 traspueta:</p>"+matriz1.trasponer().toString();
+		});
+		trasponer2.addEventListener("click",function(){
+			contenido.innerHTML+="<p>matriz2 traspueta:</p>"+matriz2.trasponer().toString();
+
+		});
+
+
+	
+
+
+});trasponer
+
+});
 
 
 

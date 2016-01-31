@@ -126,7 +126,11 @@ window.addEventListener("load",function(){
 			}
 		});
 		restar.addEventListener("click",function(){
-			contenido.innerHTML+="<p>matriz1-matriz2:</p>"+matriz1.resta(matriz2).toString();
+			try{
+				contenido.innerHTML+="<p>matriz1-matriz2:</p>"+matriz1.resta(matriz2).toString();
+			}catch(TamanhoNoValidoException){
+				alert(TamanhoNoValidoException);
+			}
 		});
 		trasponer1.addEventListener("click",function(){
 			contenido.innerHTML+="<p>matriz1 traspueta:</p>"+matriz1.trasponer().toString();
