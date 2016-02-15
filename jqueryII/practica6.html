@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Método jQuery CSS</title>
+	<script language="javascript" type="text/javascript" src="practica6_files/jquery-1.js"></script>
+	
+	<script language="javascript">
+		$(document).ready(function(){
+			//alert ($("#micapa").css("color"));
+			
+			$("#micapa").css("color", "green");
+			//alert ($("#micapa").css("color"));
+			
+			$("#micapa").css({
+				"background-color": "#ff8800",
+				"position": "absolute",
+				"width": "100px",
+				"top": "100px",
+				"left": "200px"
+			})
+			
+			$("#fondogris").click(function(e){
+				e.preventDefault();
+				$("#micapa").css("background-color","#999");
+			})
+			
+			$("#fondonaranja").click(function(e){
+				e.preventDefault();
+				$("#micapa").css("background-color","#f80");
+			})
+			
+			$("#ocultarmostrar").click(function(e){
+				e.preventDefault();
+				var c = $("#micapa");
+				var mostrandose = c.css("display");
+				if (mostrandose=="block"){
+					c.css("display", "none");
+				}else{
+					c.css("display", "block");
+				}
+			})
+			
+			$("#micapa").mouseover(function(){
+				antiguoLeft = parseInt($(this).css("left"));
+				//alert (antiguoLeft);
+				$(this).css("left", antiguoLeft + 10 + "px");
+			})
+			
+			$("#micapa").click(function(){
+				$(this).css("width", function(index, value){
+					//alert (value);
+					var aumento = prompt("cuanto quieres aumentar?", "25");
+					return (parseInt(value) + parseInt(aumento)) + "px";
+				});
+			})
+		})
+	</script>
+</head>
+<body>
+    <div id="micapa" style="color: green; background-color: rgb(255, 136, 0); position: absolute; width: 100px; top: 100px; left: 200px;">hola!</div>
+	<a href="#" id="fondogris">Poner fondo gris</a>
+	<br>
+	<a href="#" id="fondonaranja">Poner fondo naranja</a>
+	<br>
+	<a href="#" id="ocultarmostrar">Ocultar o mostrar</a>
+
+
+</body></html>
