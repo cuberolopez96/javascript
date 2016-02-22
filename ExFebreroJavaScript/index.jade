@@ -1,0 +1,35 @@
+html
+	head
+		meta(charset="UTF-8")
+		title= "Juan Antonio Cubero Lopez"
+		script(src="js/main.js")
+		link(rel="stylesheet" type="text/css" href="css/style.css")
+	body
+		main
+			#formulario
+					label(for="nombre")="Nombre"
+					input#nombre(type="text")
+					span#snombre
+					br
+					label(for="apellidos")="Apellidos"
+					input#apellidos(type="text")
+					span#sapellidos
+					br
+					label(for="dni")="Dni"
+					input#dni(type="text")
+					span#sdni
+					br
+					label(for="sexo")="Sexo"
+					select#sexo(name="sexo")
+						option(value="masculino")="Masculino"
+						option(value="femenino")="femenino"
+					br
+					input#aceptar(type="checkbox")
+					label#laceptar(for="aceptar")="Acepto las condiciones"
+					span#saceptar
+					br
+					input#nuevoUsuario(type="submit" value="Nuevo usuario")
+					input#limpiar(type="submit" value="limpiar")
+					br
+			#datosUsuarios
+			#listaUsuarios
