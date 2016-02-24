@@ -83,8 +83,12 @@
 			});
 
 			crearNU.addEventListener('click', function() {
+				var validarnombre = comprobarDato('snombre',unombre.value,pna,errornombre);
+				var validarapellido = comprobarDato('sapellidos',uapellidos.value,pna,errorapellido);
+				var validardni = comprobarDato('sdni',udni.value,pdni,errordni);
+				var validaraceptar = comprobarAceptar();
 
-				if(comprobarDato('snombre',unombre.value,pna,errornombre)&&comprobarDato('sapellidos',uapellidos.value,pna,errorapellido)&&comprobarDato('sdni',udni.value,pdni,errordni)&&comprobarAceptar()){
+				if(validarnombre&&validarapellido&&validardni&&validaraceptar){
 
 
 					var usuario = new Usuario(unombre.value,uapellidos.value,udni.value,usexo.value);
