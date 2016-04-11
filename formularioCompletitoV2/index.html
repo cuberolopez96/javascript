@@ -1,0 +1,64 @@
+<!--validacion de un formulario en javascript-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/styles.css">
+   
+    <script src="js/objeto.js"></script>
+</head>
+<body>
+    <div id="formulario">
+        <form action="">
+            <!--nombre (Nombre compuesto)-->
+            <label for="nombre">Nombre</label><input type="text" id="nombre"><span id="snombre"></span>
+            <!--apellidos-->
+            <label for="apellidos">Apellidos</label><input type="text" id="apellidos"><span id="sapellidos"></span>
+            <!--dni-->
+            <label for="dni">Dni</label><input type="text" id="dni"><span id="sdni"></span>
+
+            <!--correo-->
+            <label for="correo">Correo</label><input type="text" id="correo"><span id="scorreo"></span>
+
+            <!--alias-->
+            <label for="alias">Alias</label><input type="text" id="alias"><span id="salias"></span>
+
+            <!--fecha de Nacimiento-->
+            <label for="fecha">Fecha de Nacimiento</label><input type="text" placeholder="dd/mm/yyyy" id="fecha"><span id="sfecha"></span>
+
+            <!--iban-->
+            <label for="iban">Iban</label><input type="text" id="iban"><span id="siban"></span>
+
+            <!--checbox-->
+            <input type="checkbox" id="aceptar"><label for="aceptar" class="aceptar">Acepta las condiciones</label><span id="saceptar"></span><br>
+
+            <!--radiobutton-->
+           <div id="genero">
+               <input type="radio" name="genero" class="radio genero" id="masculino" value="masculino"><label for="masculino" class="radio">Masculino</label>
+               <input type="radio" name="genero" class="radio genero" id="femenino" value="femenino"><label for="femenino" class="radio">Femenino</label>
+               <input type="radio" name="genero" class="radio genero" id="default" value="default"><label for="default" class="radio">Default</label>
+               <span id="sgenero"></span>
+           </div>
+            <!--select default-->
+            <label for="localizacion">Localizacion</label>
+            <select name="localizacion" id="localizacion">
+                <option value="default">default</option>
+                <option value="Córdoba">Córdoba</option>
+                <option value="Sevilla">Sevilla</option>
+                <option value="Cádiz">Cádiz</option>
+            </select>
+            <span id="slocalizacion"></span>
+            <!--password-->
+            <label for="password">Password</label><input type="password" id="password"><span id="spassword"></span>
+            <!--telefono-->
+            <label for="telefono">Telefono</label><input type="text" id="telefono"><span id="stelefono"></span>
+            <!--url-->
+            <label for="url">Url</label><input type="text" id="url"><span id="surl"></span>
+            <!---->
+
+
+        </form>
+    </div>
+</body>
+</html>
